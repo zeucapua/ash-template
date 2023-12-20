@@ -1,0 +1,27 @@
+---
+export const partial = true;
+---
+<section 
+  id="timer" 
+  class="w-fit mx-auto my-8 px-8 py-4 border-4 border-blue-500 rounded-xl bg-blue-100"
+> 
+  <input
+    name="user_duration"
+    type="number"
+    min={0}
+    value={10}
+    class="px-4 py-2 border border-black"
+  />
+
+  <button
+    id="timer_button"
+    hx-trigger="click"
+    hx-post="/running-countdown"
+    hx-include="[name='user_duration']"
+    hx-target="#timer"
+    hx-swap="outerHTML"
+    class="px-4 py-2 bg-blue-500 text-white rounded-xl"
+  >
+    Start
+  </button>
+</section>

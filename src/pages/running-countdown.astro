@@ -1,0 +1,37 @@
+---
+import Countdown from "../components/Countdown.svelte";
+
+// this is a page partial
+export const partial = true;
+
+// get data passed into 'hx-include' using FormData
+const data = await Astro.request.formData();
+const user_duration = Number.parseInt(data.get("user_duration") as string);
+---
+
+<section 
+  id="timer" 
+  class="w-fit mx-auto my-8 px-8 py-4 border-4 border-blue-500 rounded-xl bg-blue-100"
+> 
+  <input
+    name="user_duration"
+    type="number"
+    min={0}
+    value={user_duration}
+    class="px-4 py-2 border border-black"
+    disabled
+  />
+
+  <button
+    id="timer_button"
+    hx-trigger="click, reset from:body"
+    hx-post="/timer"
+    hx-target="#timer"
+    hx-swap="outerHTML"
+    class="px-4 py-2 bg-blue-500 text-white rounded-xl"
+  >
+    End 
+  </button>
+
+  <Countdown duration={user_duration} message="This JS was streamed in with HTMX" client:load />
+</section>
