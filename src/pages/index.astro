@@ -4,14 +4,27 @@
 
 <html lang="en">
 	<head>
+		<title>ASH Stack: Project Template</title>
+
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
+    <!-- HTMX CDN script -->
     <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
-		<title>Astro</title>
 	</head>
+
 	<body>
-		<h1>Astro</h1>
+
+		<h1 class="text-9xl font-bold">Astro Svelte HTMX</h1>
+    <h2 class="text-4xl font-bold">The ASH Stack Project Template (feat. TailwindCSS)</h2>
+    <p>Below is a countdown timer. Set the duration, press <b>Start</b>, and see the secret message!</p>
+
+    <span class="animate-pulse">
+      Loading...
+    </span>
+
+
 	</body>
 </html>

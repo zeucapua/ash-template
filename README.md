@@ -19,7 +19,7 @@ pnpm create astro@latest my-app
 pnpx astro add svelte
 ```
 
-3. Whereever your `<head>` is (initially at `index.astro`), add the ![HTMX CDN script](https://htmx.org/docs/#installing)
+3. Wherever your `<head>` is (initially at `index.astro`), add the ![HTMX CDN script](https://htmx.org/docs/#installing)
 ```html
 <html lang="en">
 	<head>
@@ -40,7 +40,7 @@ If you want a deeper explanation on how this works, read this blog! (TBD)
 Let's create a countdown timer component. The user will be able to change how many
 seconds it shall start with. At the end it will display a message.
 
-- to be continued -
+***to be continued***
 
 1. Create a new page partial for our `timer` as a `.astro` file
 ```js
